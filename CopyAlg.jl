@@ -41,6 +41,9 @@ function time_last(data::Array{Int64,2}, i::Int64, k::Int64)
 
     end_time = 1085119730;
     t = (end_time-data[y[y_idx][1], 3])/86400; #convert sec to d
+    if t < 1
+        t = 1;
+    end
     return t
 end
 
